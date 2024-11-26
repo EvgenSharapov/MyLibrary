@@ -1,8 +1,13 @@
 package interfaceTest;
 
+import java.util.ArrayList;
 import java.util.Optional;
+interface B{
+    int c=10;
+}
 
-public class PrintNull {
+
+public class PrintNull implements B {
     interface I{
         String generate();
         default void print(String value){
@@ -12,6 +17,7 @@ public class PrintNull {
 
     public static void main(String[] args) {
         ((I)()->"Hello!").print(null);
+
     }
 
 }
